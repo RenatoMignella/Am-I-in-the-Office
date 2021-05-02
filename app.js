@@ -42,6 +42,9 @@ if (
 
 const inOffice = document.querySelector('.in-office');
 
+//Grey color to body page
+document.querySelector('body').style = 'background: #f3f3f3';
+
 const day = new Date();
 const weekday = new Array(7);
 weekday[0] = 'Sunday';
