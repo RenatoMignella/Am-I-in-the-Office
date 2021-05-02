@@ -11,7 +11,6 @@ var numberOfDays = Math.floor((date1 - oneJan) / (24 * 60 * 60 * 1000));
 var result = Math.ceil((date1.getDay() + 1 + numberOfDays) / 7);
 
 //display the calculated result
-console.log(result);
 
 // List of week numbers marked as B
 var week = '';
@@ -37,9 +36,8 @@ if (
    result == 51
 ) {
    week = 'a';
-   console.log(week);
 } else {
-   week = 'a';
+   week = 'b';
 }
 
 const inOffice = document.querySelector('.in-office');
@@ -54,13 +52,10 @@ weekday[4] = 'Thursday';
 weekday[5] = 'Friday';
 weekday[6] = 'Saturday';
 
-//console.log(day.getDay());
 const n = weekday[day.getDay()];
 
-console.log(week);
-
-// B is equal Thu and Fr
-// A  = MO,Tu,We
+// week A  = MO,Tu,We
+//week  B is equal Thu and Fr
 
 if ((week == 'b' && n === 'Thursday') || n === 'Friday') {
    inOffice.textContent = 'In office today (3PP)';
