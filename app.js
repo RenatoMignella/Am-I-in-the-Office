@@ -13,7 +13,7 @@ var result = Math.ceil((date1.getDay() + 1 + numberOfDays) / 7);
 //display the calculated result
 console.log(result);
 
-// Lisst of week numbers marked as B
+// List of week numbers marked as B
 var week = '';
 if (
    result == 17 ||
@@ -36,10 +36,10 @@ if (
    result == 49 ||
    result == 51
 ) {
-   var week = 'a';
+   week = 'a';
    console.log(week);
 } else {
-   var week = 'a';
+   week = 'a';
 }
 
 const inOffice = document.querySelector('.in-office');
@@ -64,8 +64,18 @@ console.log(week);
 
 if ((week == 'b' && n === 'Thursday') || n === 'Friday') {
    inOffice.textContent = 'In office today (3PP)';
+   inOffice.style.color = 'green';
 } else if ((week === 'a' && n === 'Monday') || n === 'Tuesday' || n === 'Wednesday') {
    inOffice.textContent = 'In office today (3PP)';
+   inOffice.style.color = 'green';
 } else {
    inOffice.textContent = 'NOT In office today';
+   inOffice.style.color = 'red';
+
+   document.querySelector('.time').textContent = 'Working From Home';
+
+   if (n === 'Saturda' || 'Sunday') {
+      document.querySelector('.time').style.color = 'orange';
+      document.querySelector('.time').textContent = 'Not Available on Weekend';
+   }
 }
