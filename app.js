@@ -77,3 +77,9 @@ if ((week == 'b' && n === 'Thursday') || n === 'Friday') {
       document.querySelector('.time').textContent = 'Not Available on Weekend';
    }
 }
+
+if (week === 'b') {
+   document.querySelector('.thisweek').textContent = 'Days on this Week: Thursday and Friday.';
+} else {
+   document.querySelector('.thisweek').textContent = 'Days on this Week: Monday Tuesday and Wednesday.';
+}
