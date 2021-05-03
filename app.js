@@ -78,6 +78,7 @@ if ((week == 'b' && n === 'Thursday') || n === 'Friday') {
    }
 }
 
+// show the days that I will be available
 if (week === 'b') {
    document.querySelector('.thisweek').textContent = 'Days on this Week: Thursday and Friday.';
 } else {
