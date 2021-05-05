@@ -70,7 +70,7 @@ if ((week == 'b' && n === 'Thursday') || n === 'Friday') {
    inOffice.textContent = 'NOT In office today';
    inOffice.style.color = 'red';
 
-   document.querySelector('.time').textContent = 'Working From Home';
+   document.querySelector('.time').textContent = 'Working From Home 8:00 to 4:00 ';
 
    if (n === 'Saturda' || 'Sunday') {
       document.querySelector('.time').style.color = 'orange';
