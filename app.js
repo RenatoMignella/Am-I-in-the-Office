@@ -15,29 +15,29 @@ var result = Math.ceil((date1.getDay() + 1 + numberOfDays) / 7);
 // List of week numbers marked as B
 var week = '';
 if (
-   result == 17 ||
-   result == 19 ||
-   result == 21 ||
-   result == 23 ||
-   result == 25 ||
-   result == 27 ||
-   result == 29 ||
-   result == 31 ||
-   result == 33 ||
-   result == 34 ||
-   result == 35 ||
-   result == 37 ||
-   result == 39 ||
-   result == 41 ||
-   result == 43 ||
-   result == 45 ||
-   result == 47 ||
-   result == 49 ||
-   result == 51
+     result == 17 ||
+     result == 19 ||
+     result == 21 ||
+     result == 23 ||
+     result == 25 ||
+     result == 27 ||
+     result == 29 ||
+     result == 31 ||
+     result == 33 ||
+     result == 34 ||
+     result == 35 ||
+     result == 37 ||
+     result == 39 ||
+     result == 41 ||
+     result == 43 ||
+     result == 45 ||
+     result == 47 ||
+     result == 49 ||
+     result == 51
 ) {
-   week = 'a';
+     week = 'a';
 } else {
-   week = 'b';
+     week = 'b';
 }
 
 const inOffice = document.querySelector('.in-office');
@@ -61,26 +61,27 @@ const n = weekday[day.getDay()];
 //week  B is equal Thu and Fr
 
 if ((week == 'b' && n === 'Thursday') || n === 'Friday') {
-   inOffice.textContent = 'In office today (3PP)';
-   inOffice.style.color = 'green';
-} else if ((week === 'a' && n === 'Monday') || n === 'Tuesday' || n === 'Wednesday') {
-   inOffice.textContent = 'In office today (3PP)';
-   inOffice.style.color = 'green';
+     inOffice.textContent = 'In office today (3PP)';
+     inOffice.style.color = 'green';
+}
+if ((week === 'a' && n === 'Monday') || n === 'Tuesday' || n === 'Wednesday') {
+     inOffice.textContent = 'In office today (3PP)';
+     inOffice.style.color = 'green';
 } else {
-   inOffice.textContent = 'NOT In office today';
-   inOffice.style.color = 'red';
+     inOffice.textContent = 'NOT In office today';
+     inOffice.style.color = 'red';
 
-   document.querySelector('.time').textContent = 'Working from home 8:00 to 4:00 ';
+     document.querySelector('.time').textContent = 'Working from home 8:00 to 4:00 ';
 
-   if (n === 'Saturday' || n === 'Sunday') {
-      document.querySelector('.time').style.color = 'orange';
-      document.querySelector('.time').textContent = 'Not Available on Weekend';
-   }
+     if (n === 'Saturday' || n === 'Sunday') {
+          document.querySelector('.time').style.color = 'orange';
+          document.querySelector('.time').textContent = 'Not Available on Weekend';
+     }
 }
 
 // show the days that I will be available
 if (week === 'b') {
-   document.querySelector('.thisweek').textContent = 'Days in on this Week: Thursday and Friday.';
+     document.querySelector('.thisweek').textContent = 'Days in on this Week: Thursday and Friday.';
 } else {
-   document.querySelector('.thisweek').textContent = 'Days in on this Week: Monday Tuesday and Wednesday.';
+     document.querySelector('.thisweek').textContent = 'Days in on this Week: Monday Tuesday and Wednesday.';
 }
