@@ -35,9 +35,9 @@ if (
      result == 49 ||
      result == 51
 ) {
-     week = 'a';
-} else {
      week = 'b';
+} else {
+     week = 'a';
 }
 
 const inOffice = document.querySelector('.in-office');
@@ -75,13 +75,15 @@ if ((week === 'a' && n === 'Monday') || n === 'Tuesday' || n === 'Wednesday') {
 
      if (n === 'Saturday' || n === 'Sunday') {
           document.querySelector('.time').style.color = 'orange';
-          document.querySelector('.time').textContent = 'Not Available on Weekend';
+          document.querySelector('.time').textContent = 'Not Available on Weekends';
      }
 }
 
 // show the days that I will be available
 if (week === 'b') {
-     document.querySelector('.thisweek').textContent = 'Days in on this Week: Thursday and Friday.';
+     document.querySelector('.thisweek').textContent =
+          'Days in on this Week: Thursday and Friday.';
 } else {
-     document.querySelector('.thisweek').textContent = 'Days in on this Week: Monday Tuesday and Wednesday.';
+     document.querySelector('.thisweek').textContent =
+          'Days in on this Week: Monday Tuesday and Wednesday.';
 }
