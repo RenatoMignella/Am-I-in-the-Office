@@ -12,7 +12,7 @@ var result = Math.ceil((date1.getDay() + 1 + numberOfDays) / 7);
 
 //display the calculated result
 
-// List of week numbers marked as B
+// List of week numbers marked as B (2021)
 var week = '';
 if (
      result == 17 ||
@@ -60,11 +60,11 @@ const n = weekday[day.getDay()];
 // week A  = MO,Tu,We
 //week  B is equal Thu and Fr
 
-if ((week == 'b' && n === 'Thursday') || n === 'Friday') {
+if (week === 'b' && n === 'Thursday' && n === 'Friday') {
      inOffice.textContent = 'In office today (3PP)';
      inOffice.style.color = 'green';
 }
-if ((week === 'a' && n === 'Monday') || n === 'Tuesday' || n === 'Wednesday') {
+if (week === 'a' && n === 'Monday' && n === 'Tuesday' && n === 'Wednesday') {
      inOffice.textContent = 'In office today (3PP)';
      inOffice.style.color = 'green';
 } else {
