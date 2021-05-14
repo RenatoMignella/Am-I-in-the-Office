@@ -60,11 +60,10 @@ const n = weekday[day.getDay()];
 // week A  = MO,Tu,We
 //week  B is equal Thu and Fr
 
-if (week === 'b' && n === 'Thursday' && n === 'Friday') {
+if ((week === 'b' && n === 'Thursday') || n === 'Friday') {
      inOffice.textContent = 'In office today (3PP)';
      inOffice.style.color = 'green';
-}
-if (week === 'a' && n === 'Monday' && n === 'Tuesday' && n === 'Wednesday') {
+} else if ((week === 'a' && n === 'Monday') || n === 'Tuesday' || n === 'Wednesday') {
      inOffice.textContent = 'In office today (3PP)';
      inOffice.style.color = 'green';
 } else {
