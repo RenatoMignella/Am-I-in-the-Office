@@ -1,18 +1,28 @@
-//define a date object variable with date inside it
-var date1 = new Date('04/26/2021');
+// function getWeekNumber(d) {
+//      // Copy date so don't modify original
+//      d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+//      // Set to nearest Thursday: current date + 4 - current day number
+//      // Make Sunday's day number 7
+//      d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+//      // Get first day of year
+//      var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+//      // Calculate full weeks to nearest Thursday
+//      var weekNo = Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
+//      // Return array of year and week number
+//      return [d.getUTCFullYear(), weekNo];
+// }
+// var result = getWeekNumber(new Date());
 
-//find the year of the entered date
-var oneJan = new Date(date1.getFullYear(), 0, 1);
+let now = new Date();
+let onejan = new Date(now.getFullYear(), 0, 1);
+let result = Math.ceil(
+     ((now.getTime() - onejan.getTime()) / 86400000 + onejan.getDay() + 1) / 7
+);
 
-// calculating number of days in given year before the given date
-var numberOfDays = Math.floor((date1 - oneJan) / (24 * 60 * 60 * 1000));
+// console.log(result);
 
-// adding 1 since to current date and returns value starting from 0
-var result = Math.ceil((date1.getDay() + 1 + numberOfDays) / 7);
+// List of week numbers marked as A (2021)
 
-//display the calculated result
-
-// List of week numbers marked as B (2021)
 var week = '';
 if (
      result == 17 ||
@@ -35,9 +45,9 @@ if (
      result == 49 ||
      result == 51
 ) {
-     week = 'b';
-} else {
      week = 'a';
+} else {
+     week = 'b';
 }
 
 const inOffice = document.querySelector('.in-office');
@@ -60,6 +70,7 @@ const n = weekday[day.getDay()];
 // week A  = MO,Tu,We
 //week  B is equal Thu and Fr
 
+console.log(week);
 if ((week === 'b' && n === 'Thursday') || n === 'Friday') {
      inOffice.textContent = 'In office today (3PP)';
      inOffice.style.color = 'green';
