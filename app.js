@@ -93,7 +93,12 @@ if ((week === 'b' && n === 'Thursday') || n === 'Friday') {
 if (week === 'b') {
      document.querySelector('.thisweek').textContent =
           'Days in on this Week: Thursday and Friday.';
+
+     document.querySelector('.nextweek').textContent =
+          'Days in on next Week: Monday Tuesday and Wednesday';
 } else {
      document.querySelector('.thisweek').textContent =
           'Days in on this Week: Monday Tuesday and Wednesday.';
+     document.querySelector('.nextweek').textContent =
+          'Days in on next Week: Thursday and Friday';
 }
