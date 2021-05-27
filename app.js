@@ -19,7 +19,7 @@ let result = Math.ceil(
      ((now.getTime() - onejan.getTime()) / 86400000 + onejan.getDay() + 1) / 7
 );
 
-// console.log(result);
+console.log(result);
 
 // List of week numbers marked as A (2021)
 
