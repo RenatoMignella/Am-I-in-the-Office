@@ -73,7 +73,11 @@ const n = weekday[day.getDay()];
 console.log(week);
 console.log(n);
 
-if ((week === 'a' && n === 'Monday') || n === 'Tuesday' || n === 'Wednesday') {
+if (
+     (week === 'a' && n === 'Monday') ||
+     (week === 'a' && n === 'Tuesday') ||
+     n === 'Wednesday'
+) {
      inOffice.textContent = 'In office today (3PP)';
      inOffice.style.color = 'green';
 } else if ((week === 'b' && n === 'Thursday') || (week === 'b' && n == 'Friday')) {
