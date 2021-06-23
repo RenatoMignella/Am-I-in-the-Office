@@ -1,18 +1,3 @@
-// function getWeekNumber(d) {
-//      // Copy date so don't modify original
-//      d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
-//      // Set to nearest Thursday: current date + 4 - current day number
-//      // Make Sunday's day number 7
-//      d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
-//      // Get first day of year
-//      var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-//      // Calculate full weeks to nearest Thursday
-//      var weekNo = Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
-//      // Return array of year and week number
-//      return [d.getUTCFullYear(), weekNo];
-// }
-// var result = getWeekNumber(new Date());
-
 let now = new Date();
 let onejan = new Date(now.getFullYear(), 0, 1);
 let result = Math.ceil(
@@ -23,6 +8,9 @@ console.log(result);
 
 // List of week numbers marked as A (2021)
 
+// If result%2 ==0 par
+// Else
+// Impar
 var week = '';
 if (
      result == 17 ||
@@ -76,7 +64,7 @@ console.log(n);
 if (
      (week === 'a' && n === 'Monday') ||
      (week === 'a' && n === 'Tuesday') ||
-     n === 'Wednesday'
+     (week === 'a' && n === 'Wednesday')
 ) {
      inOffice.textContent = 'In office today (3PP)';
      inOffice.style.color = 'green';
