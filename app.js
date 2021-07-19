@@ -13,29 +13,31 @@ console.log(result);
 // Impar
 var week = '';
 if (
-     result == 17 ||
-     result == 19 ||
-     result == 21 ||
-     result == 23 ||
-     result == 25 ||
-     result == 27 ||
-     result == 29 ||
-     result == 31 ||
-     result == 33 ||
-     result == 34 ||
-     result == 35 ||
-     result == 37 ||
-     result == 39 ||
-     result == 41 ||
-     result == 43 ||
-     result == 45 ||
-     result == 47 ||
-     result == 49 ||
-     result == 51
+     // result == 17 ||
+     // result == 19 ||
+     // result == 21 ||
+     // result == 23 ||
+     // result == 25 ||
+     // result == 27 ||
+     // result == 29 ||
+     // result == 31 ||
+     // result == 33 ||
+     // result == 34 ||
+     // result == 35 ||
+     // result == 37 ||
+     // result == 39 ||
+     // result == 41 ||
+     // result == 43 ||
+     // result == 45 ||
+     // result == 47 ||
+     // result == 49 ||
+     // result == 51  // (week = 'a')
+     result % 2 ==
+     0
 ) {
-     week = 'a';
-} else {
      week = 'b';
+} else {
+     week = 'a'; //(was week 'b' before)
 }
 
 const inOffice = document.querySelector('.in-office');
